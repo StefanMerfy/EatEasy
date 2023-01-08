@@ -53,16 +53,19 @@ function parseHints( hints){
     document.getElementById("resultsArea").appendChild(div);
     div.setAttribute("style","height:35px");
     div.className = "result"
+    
+
 
     console.log(hints)
     if(hints.length == 0){
         var noRes = document.createElement("div");
-        noRes.innerHTML = "No Results, searched item may not be in database";
+        noRes.innerHTML = "No Result";
         document.getElementById("resultsArea").appendChild(noRes);
         noRes.className = "result"
 
     }
     for(var i = 0; i<=hints.length; i++){
+
         var output = ""
         item = hints[i];
         if(item!= undefined){
@@ -120,7 +123,7 @@ function parseHints( hints){
             titles.className = "result"
             if(brand != undefined){
                 var brands = document.createElement("div");
-                brands.innerHTML = brand;
+                brands.innerHTML = "Brand: " + brand;
                 document.getElementById("resultsArea").appendChild(brands);
                 brands.className = "result"
             }
@@ -160,6 +163,7 @@ function parseHints( hints){
             document.getElementById("resultsArea").appendChild(div);
             div.setAttribute("style","height:35px");
             div.className = "result"
+            
         }
 
         
