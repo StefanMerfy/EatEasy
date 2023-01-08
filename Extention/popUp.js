@@ -59,9 +59,11 @@ function parseHints( hints){
     div.className = "result"
 
     console.log(hints)
-    if(hints == undefined){
-        return "No results";
-
+    if(hints.length == 0){
+        var noRes = document.createElement("div");
+        noRes.innerHTML = "No Result";
+        document.getElementById("resultsArea").appendChild(noRes);
+        noRes.className = "result"
     }
     for(var i = 0; i<=hints.length; i++){
         var output = ""
@@ -167,5 +169,4 @@ function parseHints( hints){
 }
 
 
-
-}
+    }
